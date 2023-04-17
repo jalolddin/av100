@@ -1,0 +1,340 @@
+    * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        font-family: Montserrat, Helvetica, Arial, sans-serif;
+    }
+    
+    .tooltip {
+        position: relative;
+        display: inline-block;
+        // border-bottom: 1px dotted black;
+    }
+    
+    .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 310px;
+        background-color: rgb(45 197 116);
+        color: #fff;
+        text-align: center;
+        border-radius: 2px;
+        padding: 5px 0;
+        position: absolute;
+        font-size: 0.8rem;
+        z-index: 1;
+        top: 150%;
+        left: 50%;
+        margin-left: -153px;
+    }
+    
+    .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        bottom: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: transparent transparent rgb(45 197 116) transparent;
+    }
+    
+    .tooltip:hover .tooltiptext {
+        visibility: visible;
+    }
+    
+    .title {
+        padding: 1rem;
+        font-size: 1.7rem;
+        background-color: #f5f5f5;
+    }
+    
+    .settings {
+        padding: 1rem;
+        h2 {
+            font-size: 1.2rem;
+            font-weight: 550;
+        }
+        &__call {
+            display: flex;
+            gap: 5rem;
+            align-items: flex-start;
+            .switch {
+                display: flex;
+                align-items: center;
+                gap: 0.7rem;
+                label {
+                    margin-top: 0.8rem;
+                }
+            }
+            p {
+                width: 25rem;
+                color: rgb(104 104 105);
+                font-size: 0.8rem;
+                line-height: 1.4rem;
+                font-weight: 400;
+            }
+        }
+        &__account {
+            display: flex;
+            gap: 9.9rem;
+            margin-top: 2.5rem;
+            align-items: flex-start;
+            .form {
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                div {
+                    align-items: flex-start;
+                    display: flex;
+                    justify-content: space-between;
+                    gap: 3rem;
+                    input {
+                        height: 1.9rem;
+                        outline: none;
+                        border: 1px solid rgb(225 225 227);
+                        padding-left: 0.5rem;
+                        border-radius: 0.3rem;
+                        width: 12rem;
+                        font-size: 0.8rem;
+                        opacity: 0.8;
+                        &:focus {
+                            border-color: rgb(45 197 116);
+                            transition: all, 0.5s;
+                        }
+                    }
+                    label {
+                        opacity: 0.8;
+                        font-size: 0.8rem;
+                        line-height: 1.2rem;
+                        font-weight: 500;
+                        margin-top: 0.3rem;
+                    }
+                    div {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        gap: 0.1rem;
+                        span {
+                            margin-top: 0.4rem;
+                            font-size: 0.7rem;
+                            color: rgb(104 104 105);
+                        }
+                    }
+                }
+            }
+        }
+        &__notifications {
+            display: flex;
+            gap: 6.3rem;
+            margin-top: 2.5rem;
+            &__right {
+                .line {
+                    background-color: rgb(225 225 227);
+                    height: 1px;
+                    width: 19.5rem;
+                }
+                p {
+                    color: rgb(104 104 105);
+                    line-height: 1.2rem;
+                    font-size: 0.8rem;
+                    margin-bottom: 1.2rem;
+                }
+                span {
+                    font-size: 0.9rem;
+                    font-weight: 600;
+                }
+                &__radio {
+                    margin-top: 1.2rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    width: 19.5rem;
+                    .telegramInput {
+                        label {
+                            text-decoration: underline;
+                            color: rgb(45 197 116);
+                        }
+                    }
+                    div {
+                        display: flex;
+                        gap: 0.4rem;
+                        align-items: center;
+                        justify-content: space-between;
+                        .removeApperance {
+                            appearance: none;
+                            outline: none;
+                            border: none;
+                            margin-right: -2rem;
+                            width: 13rem;
+                        }
+                        input[type="text"] {
+                            outline: none;
+                            border: 1px solid rgb(225 225 227);
+                            padding: 0.2rem;
+                            font-size: 0.8rem;
+                        }
+                        div {
+                            display: flex;
+                            gap: 0.4rem;
+                            align-items: center;
+                            label {
+                                opacity: 0.7;
+                                font-size: 0.8rem;
+                            }
+                            input {
+                                -webkit-appearance: none;
+                                width: 15px;
+                                height: 15px;
+                                border-radius: 50%;
+                                outline: none;
+                                border: 1px solid rgb(45 197 116);
+                            }
+                            input[type="radio"]:checked:before {
+                                background: rgb(45 197 116);
+                            }
+                            input[type="radio"]:checked {
+                                border-color: rgb(45 197 116);
+                            }
+                            input[type='radio']:before {
+                                content: '';
+                                display: block;
+                                width: 60%;
+                                height: 60%;
+                                margin: 20% auto;
+                                border-radius: 50%;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &__card {
+            display: flex;
+            gap: 7.6rem;
+            margin-top: 2.5rem;
+            &__right {
+                .line {
+                    background-color: rgb(225 225 227);
+                    height: 1px;
+                    width: 19.5rem;
+                }
+                p {
+                    color: rgb(104 104 105);
+                    line-height: 1.2rem;
+                    font-size: 0.8rem;
+                    margin-bottom: 1.2rem;
+                }
+                &__radio {
+                    margin-top: 1.2rem;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    width: 19.5rem;
+                    .tooltip__content {
+                        display: flex;
+                        justify-content: space-between;
+                    }
+                    div {
+                        display: flex;
+                        gap: 0.4rem;
+                        align-items: center;
+                        label {
+                            opacity: 0.7;
+                            font-size: 0.8rem;
+                        }
+                        input {
+                            -webkit-appearance: none;
+                            width: 15px;
+                            height: 15px;
+                            border-radius: 50%;
+                            outline: none;
+                            border: 1px solid rgb(45 197 116);
+                        }
+                        input[type="radio"]:checked:before {
+                            background: rgb(45 197 116);
+                        }
+                        input[type="radio"]:checked {
+                            border-color: rgb(45 197 116);
+                        }
+                        input[type='radio']:before {
+                            content: '';
+                            display: block;
+                            width: 60%;
+                            height: 60%;
+                            margin: 20% auto;
+                            border-radius: 50%;
+                        }
+                    }
+                }
+            }
+        }
+        &__another {
+            display: flex;
+            gap: 8.5rem;
+            margin-top: 2.5rem;
+            &__right {
+                &__select {
+                    display: flex;
+                    gap: 1.5rem;
+                    align-items: center;
+                    p {
+                        font-size: 0.8rem;
+                    }
+                    select {
+                        width: 11rem;
+                        height: 1.3rem;
+                        background-color: white;
+                        border: 1px solid rgb(225 225 227);
+                        border-radius: 0.2rem;
+                        font-size: 0.7rem;
+                        padding-left: 0.4rem;
+                        outline: none;
+                    }
+                }
+                &__checkbox {
+                    display: flex;
+                    flex-direction: column;
+                    width: 19.5rem;
+                    gap: 1rem;
+                    margin-top: 1.5rem;
+                    div {
+                        display: flex;
+                        gap: 0.4rem;
+                        align-items: center;
+                        justify-content: space-between;
+                        div {
+                            display: flex;
+                            gap: 0.4rem;
+                            align-items: center;
+                            input {
+                                border: none;
+                                outline: none;
+                                border-color: rgb(45 197 116);
+                                width: 0.9rem;
+                                height: 0.9rem;
+                                margin-top: 0.1px;
+                            }
+                            label {
+                                font-size: 0.7rem;
+                            }
+                        }
+                    }
+                }
+                .line {
+                    background-color: rgb(225 225 227);
+                    height: 1px;
+                    margin-top: 1.5rem;
+                    margin-bottom: 0.7rem;
+                    width: 24rem;
+                }
+                button {
+                    background-color: rgb(45 197 116);
+                    width: 24rem;
+                    height: 2rem;
+                    color: white;
+                    border: none;
+                    border-radius: 0.2rem;
+                }
+            }
+        }
+    }
