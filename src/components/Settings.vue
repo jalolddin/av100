@@ -3,7 +3,7 @@
       <h2 class="title">Настройки</h2>
       <div class="settings">
 
-        <!-- Call SIP -->
+        <!-- ====================== Call SIP  ===================-->
         <div class="settings__call">
               <div class="switch">  
                 <h2>Звонок через SIP</h2>
@@ -12,7 +12,7 @@
               <p>Включите эту функцию чтобы Авито и другие площадки не блокировали ваш аккаунт. Будет выглядеть так, будто звонки совершаются с разных номеров.</p>
         </div>
 
-        <!-- User Data -->
+        <!--  ===============================  User Data  =================-->
         <div class="settings__account">
             <h2>Учётная запись</h2>
             <div class="form">
@@ -42,14 +42,14 @@
             </div>
         </div>
 
-        <!-- Notification -->
+        <!-- =================== Notification ====================-->
         <div class="settings__notifications">
             <h2>Оповещения о новых <br> подборках</h2>
             <div class="settings__notifications__right">
                   <p>Выберите, куда будут приходить уведомления при появлении <br> автомобилей, которые подходят под критерии вашей подборки.</p>
                   <span>Уведомления</span>
                  <div class="settings__notifications__right__radio">
-                  <!-- OFF -->
+                  <!-- ================ OFF ================= -->
                    <div>
                         <div>
                           <input value="0" v-model="notification" type="radio">
@@ -57,7 +57,7 @@
                         </div>
                     </div>
                     <div class="line"></div>
-                    <!-- PUSH -->
+                    <!-- ================= PUSH ============== -->
                     <div>
                       <div>
                         <input  value="1" v-model="notification" type="radio">
@@ -73,7 +73,7 @@
                       </div>
                     </div>
                     <div class="line"></div>
-                    <!-- EMAIL -->
+                    <!-- ============   EMAIL ===================== -->
                     <div class="emailInput">
                         <div>
                           <input  value="2" v-model="notification" type="radio">
@@ -90,13 +90,13 @@
                         </div>
                     </div>
                     <div class="line"></div>
-                    <!-- TELEGRAM -->
+                    <!--==================== TELEGRAM ====================== -->
                     <div class="telegramInput">
                         <div>
                           <input value="3" v-model="notification" type="radio">
                           <label for="value">Telegram ID</label>
                         </div>
-                        <!-- Unvisibleinputs -->
+                        <!-- ============ Unvisibleinputs ============= -->
                         <input  v-model="telegram" v-if="telegramVisible" type="text">
                         <input :readonly="true" :class="{removeApperance: true}" v-model="telegram" v-else>
                         <div v-if="!telegramVisible" @click="telegramVisible =! telegramVisible">
@@ -110,7 +110,7 @@
             </div>
         </div>
         
-        <!-- About Card -->
+        <!--  ====================  About Card  ==============-->
         <div class="settings__card">
             <h2>Переход в карточку</h2>
             <div class="settings__card__right">
@@ -144,7 +144,7 @@
             </div>
         </div>
 
-        <!-- Another settings -->
+        <!-- ========================= Another settings ============================= -->
         <div class="settings__another">
             <h2>Прочие настройки</h2>
             <div class="settings__another__right">
@@ -185,7 +185,7 @@
                 </div>
               </div>
               <div class="line"></div>
-              
+    
               <notifications group="foo" position="top center" />
               <button  @click="updateData">Сохранить</button>
           </div>
